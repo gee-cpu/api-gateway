@@ -1,5 +1,5 @@
 server:
-  port: 8085
+  port: 9090
 
 spring:
   application:
@@ -7,9 +7,87 @@ spring:
   cloud:
     gateway:
       routes:
-
-
-
+        - id: google-maps
+          uri: lb://google-maps-integration
+          predicates:
+            - Path=/google-maps/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: google-maps-integration
+                fallbackuri: forward:/mapsServicefallback
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
+        - id: places
+          uri: lb://google-maps-integration
+          predicates:
+            - Path=/places/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: google-maps-integration
+                fallbackuri: forward:/mapsServicefallback
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
+        - id: geocoding
+          uri: lb://google-maps-integration
+          predicates:
+            - Path=/geocode/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: google-maps-integration
+                fallbackuri: forward:/mapsServicefallback
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
+        - id: directions
+          uri: lb://google-maps-integration
+          predicates:
+            - Path=/directions/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: google-maps-integration
+                fallbackuri: forward:/mapservicefallback
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
+        - id: crime-service-crimes
+          uri: lb://crime-service
+          predicates:
+            - Path=/api/crimes/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: crime-service
+                fallbackuri: forward:/crimeservicefallback
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
+        - id: crime-service-users
+          uri: lb://crime-service
+          predicates:
+            - Path=/api/users/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: crime-service
+                fallbackuri: forward:/crimeservicefallback
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 1
+                redis-rate-limiter.burstCapacity: 1
+  config:
+    import:
+      config-server: http://localhost:8083
 eureka:
   client:
     service-url:
@@ -18,3 +96,6 @@ management:
   tracing:
     sampling:
       probability: 1.0
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
