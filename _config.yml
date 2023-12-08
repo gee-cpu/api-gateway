@@ -6,55 +6,6 @@ repository:
   name: gee-cpu/gee-cpu.github.io
   branch: master # Consider using "main" as the default branch name
 
-  # Skills section
-skills:
-  - category: Java
-    list:
-      - Core
-      - Spring
-      - Spring Boot
-  - category: DevOps
-    list:
-      - Docker
-      - Kubernetes
-  - category: Databases
-    list:
-      - MySQL
-      - PostgreSQL
-      - MongoDB
-  - category: Messaging
-    list:
-      - RabbitMQ
-      - JMS
-  - category: Build Tools
-    list:
-      - Maven
-      - Gradle
-  - category: Version Control
-    list:
-      - Git
-  - category: Testing
-    list:
-      - Selenium
-      - JUnit
-      - BDD
-      - TDD
-  - category: CI/CD
-    list:
-      - Jenkins
-  - category: Web Services
-    list:
-      - REST
-      - GraphQL
-  - category: Security
-    list:
-      - Spring Security
-  - category: Project Management
-    list:
-      - Jira
-      - Confluence
-
-
 # Build settings
 plugins:
   - jekyll-feed
