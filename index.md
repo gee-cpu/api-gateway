@@ -5,7 +5,7 @@ description: This is an Api-gateway for crime and maps services.
 ---
 
 <head>
-  <link rel="stylesheet" href="{{ 'style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ 'style.css' | https://gee-cpu.github.io/api-gateway/ }}">
 </head>
 
 <section class="main-content">
