@@ -9,7 +9,7 @@ description: Experienced Senior Software Engineer passionate about solving tomor
 </head>
 
 <section class="main-content">
-  <h1>Welcome to My Portfolio!</h1>
+  <h1>Portfolio</h1>
   <p>
     I'm George Onchaba, a seasoned Senior Software Engineer with 6+ years of experience. 
     I'm passionate about developing innovative solutions to tackle tomorrow's challenges. 
