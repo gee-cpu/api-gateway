@@ -15,18 +15,123 @@ description: Experienced Senior Software Engineer passionate about solving tomor
     I'm passionate about developing innovative solutions to tackle tomorrow's challenges. 
     Below are some highlights of my career and the projects I've worked on.
   </p>
-  <h2>Tech Stack</h2>
-  <p>
-    My technical expertise spans a diverse range of tools and technologies. 
-    Here's a glimpse of my tech stack:
-  </p>
-  <ul>
-    <li>Java core, Spring, Spring Boot, Spring Security, RabbitMQ, JMS, Docker, Kubernetes</li>
-    <li>MySQL, PostgreSQL, MongoDB, Jenkins, Git, Maven, Gradle, REST, GraphQL, Microservices</li>
-    <li>Selenium, JUnit, BDD, TDD, Jira, Confluence</li>
-  </ul>
 
-  <h2>Projects</h2>
+  <div class="skills-section">
+    <h2>Skills</h2>
+    <table>
+      <tr>
+        <td>Java</td>
+        <td>
+          <ul>
+            <li>Core</li>
+            <li>Spring</li>
+            <li>Spring Boot</li>
+            <li>Spring Security</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>DevOps</td>
+        <td>
+          <ul>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Databases</td>
+        <td>
+          <ul>
+            <li>MySQL</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Messaging</td>
+        <td>
+          <ul>
+            <li>RabbitMQ</li>
+            <li>JMS</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Build Tools</td>
+        <td>
+          <ul>
+            <li>Maven</li>
+            <li>Gradle</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Version Control</td>
+        <td>
+          <ul>
+            <li>Git</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Testing</td>
+        <td>
+          <ul>
+            <li>Selenium</li>
+            <li>JUnit</li>
+            <li>BDD</li>
+            <li>TDD</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>CI/CD</td>
+        <td>
+          <ul>
+            <li>Jenkins</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Web Services</td>
+        <td>
+          <ul>
+            <li>REST</li>
+            <li>GraphQL</li>
+          </ul>
+        </td>
+      </tr>
+            <tr>
+        <td>Security</td>
+        <td>
+          <ul>
+            <li>Spring Security</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Project Management</td>
+        <td>
+          <ul>
+            <li>Jira</li>
+            <li>Confluence</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Microservices</td>
+        <td>
+          <ul>
+            <li>Microservices</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+ <h2>Projects</h2>
   <ul>
     <li>
       <a href="https://github.com/gee-cpu/api-gateway">Api-gateway</a> - 
