@@ -6,6 +6,8 @@ description: Experienced Senior Software Engineer passionate about solving tomor
 
 <head>
   <link rel="stylesheet" href="{{ 'style.css' | https://gee-cpu.github.io/api-gateway/ }}">
+  <meta name="description" content="{{ page.description }}">
+
 </head>
 
 <section class="main-content">
