@@ -105,6 +105,17 @@ description: Experienced Senior Software Engineer passionate about solving tomor
     <li>Bachelor of Science Computer Science - Kibabii University</li>
   </ul>
 
-  <h2>Contact Me</h2>
-  <p>Feel free to reach out to me via email: <a href="mailto:ggonchaba@gmail.com">ggonchaba@gmail.com</a></p>
+ <h2>Contact Me</h2>
+<p>
+  Feel free to reach out to me via:
+  <br>
+  Email: <a href="mailto:ggonchaba@gmail.com">ggonchaba@gmail.com</a>
+  <br>
+  LinkedIn: <a href="https://www.linkedin.com/in/gonchaba" target="_blank">LinkedIn</a>
+  <br>
+  GitHub: <a href="https://github.com/gee-cpu" target="_blank">GitHub</a>
+  <br>
+  Phone: +254728238210
+</p>
+
 </section>
