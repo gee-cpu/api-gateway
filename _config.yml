@@ -1,14 +1,12 @@
-# _config.yml
-
 theme: jekyll-theme-minimal
 
-title: Api-gateway portifolio
-description: This is an api-gateway for crime and maps services.
+title: Api-gateway Portfolio
+description: This is an Api-gateway for crime and maps services.
 
 # GitHub repository settings
 repository:
-  name: gee-cpu.github.io
-  branch: master
+  name: gee-cpu/gee-cpu.github.io
+  branch: master # Consider using "main" as the default branch name
 
 # Build settings
 plugins:
@@ -33,7 +31,7 @@ seo:
     - name: github
       url: https://github.com/gee-cpu
     - name: linkedIn
-      url: https://linkedIn.com/gonchaba
+      url: https://linkedin.com/in/gonchaba
 
 # Additional settings for HTML, CSS, and styles
 # Customize the following paths based on your actual file structure
@@ -42,4 +40,4 @@ include:
   - _includes
   - assets
 
-# Other settings...
+# Other settings... configure them properly to run
