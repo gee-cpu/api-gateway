@@ -1,0 +1,45 @@
+# _config.yml
+
+theme: jekyll-theme-minimal
+
+title: Api-gateway portifolio
+description: This is an api-gateway for crime and maps services.
+
+# GitHub repository settings
+repository:
+  name: gee-cpu.github.io
+  branch: master
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude files from being processed by Jekyll
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - LICENSE
+
+# Jekyll SEO settings
+seo:
+  name: George Onchaba
+  social:
+    - name: twitter
+      url: https://twitter.com/ogee70607478
+    - name: github
+      url: https://github.com/gee-cpu
+    - name: linkedIn
+      url: https://linkedIn.com/gonchaba
+
+# Additional settings for HTML, CSS, and styles
+# Customize the following paths based on your actual file structure
+include:
+  - _layouts
+  - _includes
+  - assets
+
+# Other settings...
