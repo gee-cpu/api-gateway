@@ -1,7 +1,5 @@
-theme: jekyll-theme-minimal
-
 title: George Onchaba, Senior Backend Engineer
-description: This is my official portifolio. I have listed some of my projects and work experience.
+description: This is my official portfolio. I have listed some of my projects and work experience.
 
 # GitHub repository settings
 repository:
@@ -40,4 +38,50 @@ include:
   - _includes
   - assets
 
-# Other settings... configure them properly to run
+# Skills section
+skills:
+  - category: Java
+    list:
+      - Core
+      - Spring
+      - Spring Boot
+  - category: DevOps
+    list:
+      - Docker
+      - Kubernetes
+  - category: Databases
+    list:
+      - MySQL
+      - PostgreSQL
+      - MongoDB
+  - category: Messaging
+    list:
+      - RabbitMQ
+      - JMS
+  - category: Build Tools
+    list:
+      - Maven
+      - Gradle
+  - category: Version Control
+    list:
+      - Git
+  - category: Testing
+    list:
+      - Selenium
+      - JUnit
+      - BDD
+      - TDD
+  - category: CI/CD
+    list:
+      - Jenkins
+  - category: Web Services
+    list:
+      - REST
+      - GraphQL
+  - category: Security
+    list:
+      - Spring Security
+  - category: Project Management
+    list:
+      - Jira
+      - Confluence
