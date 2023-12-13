@@ -87,11 +87,8 @@ spring:
                 redis-rate-limiter.burstCapacity: 1
   config:
     import:
-      config-server: http://localhost:8083
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+      config-server: ${CONFIG_SERVER}http://localhost:9296
+
 management:
   tracing:
     sampling:
@@ -99,3 +96,10 @@ management:
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
+okta:
+  oauth2:
+    issuer: https://dev-44453706.okta.com/oauth2/default
+    audience: api://default
+    client-id: 0oadsyp6j7ur9KEs85d7
+    client-secret: GOfasQdsTma1ue7nlw9KI-X60blaQ7k5ZDIl9rbX12emwn-SADk2R9IHzatVPTmd
+    scopes: openid, profile, email, offline_access
