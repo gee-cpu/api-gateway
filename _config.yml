@@ -1,0 +1,40 @@
+title: George Onchaba, Senior Backend Engineer
+description: This is my official portfolio. I have listed some of my projects and work experience.
+
+# GitHub repository settings
+repository:
+  name: gee-cpu/gee-cpu.github.io
+  branch: master # Consider using "main" as the default branch name
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude files from being processed by Jekyll
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - LICENSE
+
+# Jekyll SEO settings
+seo:
+  name: George Onchaba
+  social:
+    - name: twitter
+      url: https://twitter.com/ogee70607478
+    - name: github
+      url: https://github.com/gee-cpu
+    - name: linkedIn
+      url: https://linkedin.com/in/gonchaba
+
+# Additional settings for HTML, CSS, and styles
+# Customize the following paths based on your actual file structure
+include:
+  - _layouts
+  - _includes
+  - assets
+
