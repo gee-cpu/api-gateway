@@ -1,0 +1,76 @@
+# Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway
+spec:
+  replicas: 2  # Ensure at least 2 replicas for high availability
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+      - name: api-gateway
+        image: geecpu/api-gateway:latest  # Specify image tag for clarity
+        imagePullPolicy: Always  # Ensure latest image is pulled
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"  # Specify resource requests for better scheduling
+            cpu: "250m"
+        ports:
+        - containerPort: 9090
+        env:
+        - name: EUREKA_SERVER_ADDRESS
+          valueFrom:
+            configMapKeyRef:
+              name: eureka-cm
+              key: eureka_service_address
+        - name: CONFIG_SERVER_URL
+          valueFrom:
+            configMapKeyRef:
+              name: config-cm
+              key: config_server_url
+        
+---
+# Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-gateway-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: api-gateway  # Consistent label with Deployment
+  ports:
+  - port: 80
+    targetPort: 9090
+
+# ConfigMaps (no changes)
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: eureka-cm
+data:
+  eureka_service_address: "http://eureka-0.eureka:8761/eureka"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-cm
+data:
+  config_server_url: "http://config-server-svc"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-cm
+data:
+  hostname: "postgres-0.postgres"
